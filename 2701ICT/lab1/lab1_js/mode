@@ -1,0 +1,7 @@
+mode
+The mode determines which platform styles to use.
+
+Attribute	mode
+Type	"ios" | "md"
+material design
+view on any android device will use material design sytles
