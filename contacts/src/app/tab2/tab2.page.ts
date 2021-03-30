@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavParams,ModalController} from '@ionic/angular'
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  count:number = 0;
+  userName:string="";
 
-  constructor() {}
+  constructor(private router: Router) {
+
+  }
+  
+
+  incrementCounter() {
+    this.count++;
+  }
+  login(){
+    this.router.navigateByUrl('/account/' + this.userName)
+  }
 
 }
