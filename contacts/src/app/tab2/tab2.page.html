@@ -35,7 +35,7 @@
     {{userName}}
     <!-- routerLink="/account" -->
     <div padding>
-      <ion-button routerLink="/account/{{userName}}" shape="round" size="large">
+      <ion-button (click)="incrementCounter()" routerLink="/account/{{userName}}" shape="round" size="large">
         <ion-icon slot="end" name="log-in-outline"></ion-icon>
         Login
       </ion-button>
