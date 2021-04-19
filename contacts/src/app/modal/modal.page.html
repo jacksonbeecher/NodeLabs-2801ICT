@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- <ion-back-button defaultHref="/"></ion-back-button> -->
+    </ion-buttons>
+    <ion-title>Modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>First Name:</ion-label>
+      <ion-input type="text" [(ngModel)]="firstName"  clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Last Name:</ion-label>
+      <ion-input type="text" [(ngModel)]="lastName"  clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input type="text" [(ngModel)]="email"  clearInput></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="closeModal()">{{addButton}}</ion-button>
+</ion-content>

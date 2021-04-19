@@ -13,6 +13,10 @@ const routes: Routes = [
   },
   {
     path: 'account/:id', component: AccountPage
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
   }
   
 ];
