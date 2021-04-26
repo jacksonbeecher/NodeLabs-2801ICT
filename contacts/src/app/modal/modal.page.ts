@@ -19,7 +19,7 @@ export class ModalPage implements OnInit {
     this.email = this.navParams.get("email");
     if (this.firstName != "" && this.firstName !=undefined){
       this.addButton = 'Edit';
-    }else{
+    } else {
       this.addButton = 'Add';
     }
   }

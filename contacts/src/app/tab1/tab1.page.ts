@@ -9,6 +9,8 @@ import { ModalPage } from '../modal/modal.page';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+
   firstName: String
   lastName: String
   email: String
