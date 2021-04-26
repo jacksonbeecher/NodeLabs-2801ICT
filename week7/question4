@@ -1,0 +1,7 @@
+The data that is being pushes is an integer which increases by 1 after a certain time interval. This time interval is calculated as 500+1000*i where i = each iteration through the loop and also the data being pushed.
+
+Oberserver1 one will ve subscribed and would output data = 1 - 4
+
+Observer2 will be subscribed and output data = 2-4. 
+
+Observer3 does not subscribe to anything and thus wont do anything. Assuming the picture has been cropped correctly.
