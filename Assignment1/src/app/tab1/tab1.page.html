@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Account
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Account</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <h2>Login</h2>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" autocomplete="username" placeholder="Username" [(ngModel)]="userName" name = "userName">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" autocomplete="password" placeholder="Password">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Remain logged in</ion-label>
+      <ion-checkbox slot="start"></ion-checkbox>
+    </ion-item>
+    <!-- routerLink="/account" -->
+    <div padding>
+      <ion-button routerLink="/account/{{userName}}" shape="round" size="large">
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+        Login
+      </ion-button>
+    </div>
+    <ion-item>
+      Not sign up? <div>Create one here!</div>
+    </ion-item>
+  </ion-list>
+  <app-explore-container name="Account"></app-explore-container>
+</ion-content>
