@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AccountPage } from './account/account.page';
 
 const routes: Routes = [
   {
@@ -7,12 +8,15 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'modal',
-    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
-  },
-  {
     path: 'account',
     loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
+  },
+  {
+    path: 'account/:id', component: AccountPage
+  },
+  {
+    path: 'workoutmodal',
+    loadChildren: () => import('./workoutmodal/workoutmodal.module').then( m => m.WorkoutmodalPageModule)
   }
 ];
 @NgModule({

@@ -15,7 +15,7 @@
   <h2>Login</h2>
   <ion-list>
     <ion-item>
-      <ion-input type="text" autocomplete="username" placeholder="Username" [(ngModel)]="userName" name = "userName">
+      <ion-input type="text" autocomplete="username" placeholder="Username" [(ngModel)]="username" name = "username">
       </ion-input>
     </ion-item>
     <ion-item>
@@ -28,14 +28,13 @@
     </ion-item>
     <!-- routerLink="/account" -->
     <div padding>
-      <ion-button routerLink="/account/{{userName}}" shape="round" size="large">
+      <ion-button routerLink="/account/{{username}}" shape="round" size="large">
         <ion-icon slot="end" name="log-in-outline"></ion-icon>
         Login
       </ion-button>
     </div>
-    <ion-item>
-      Not sign up? <div>Create one here!</div>
-    </ion-item>
+
+    Not signed up? <div><a routerLink="/create">Create one here!</a></div>
+
   </ion-list>
-  <app-explore-container name="Account"></app-explore-container>
 </ion-content>

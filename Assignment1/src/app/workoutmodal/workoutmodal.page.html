@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{addButton}} Workout
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label>Title:</ion-label>
+      <ion-input type="text" [(ngModel)]="title"  clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date:</ion-label>
+      <ion-input type="date" [(ngModel)]="date"  clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description:</ion-label>
+      <ion-input type="textarea" [(ngModel)]="description"  clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Location:</ion-label>
+      <ion-input type="text" [(ngModel)]="Location"  clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Rating:</ion-label>
+      <ion-input type="number" [(ngModel)]="description" min="0" max = "10" clearInput></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="closeModal()">{{addButton}}</ion-button>
+</ion-content>
