@@ -7,7 +7,7 @@ import {NavParams, ModalController} from '@ionic/angular'
   styleUrls: ['./workoutmodal.page.scss'],
 })
 export class WorkoutmodalPage implements OnInit {
-
+  //setup vars
   title="";
   date="";
   description="";

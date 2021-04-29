@@ -14,31 +14,16 @@ export class Tab2Page {
   description:String;
   location:String;
   rating:Number;
-
+  //Sample data
   workouts =[{title: 'Chest', date:'2021/5/5', description: "10x Reps", location:'The local.', rating:5 },
              {title: 'Legs', date:'2021/5/6', description: "15x Reps", location:'The local.', rating:10}]
 
-  firstName: String;
-  lastName: String;
-  email: String;
-  contacts = [{firstName: 'Fran', lastName: 'Jipani', email:'f.jipani@griffith.edu.au'},
-              {firstName: 'Frank', lastName: 'Walker', email:'f.walker@nationaltiles.com'}]
 
 
   constructor(private modalController: ModalController) {}
 
-
+  //add
   async addWorkout(){
-    // let firstName = prompt("Enter contact name");
-    // let lastName
-    // let email
-    // this.contacts.push(firstName, lastName, email);
-    // let title;
-    // let date;
-    // let description;
-    // let location;
-    // let rating;
-    // this.workouts.push(title,date,description,location,rating)
     const modal = await this.modalController.create({
       component: WorkoutmodalPage,
       componentProps: { }
@@ -51,9 +36,11 @@ export class Tab2Page {
     });
     return modal.present();
   }
+  //Delete 
   async deleteWorkout(i:number){
     this.workouts.splice(i,1)
   }
+  //edit
   async editWorkout(i:number){
  
     const editmodal = await this.modalController.create({

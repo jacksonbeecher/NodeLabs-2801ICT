@@ -13,7 +13,8 @@ export class Tab1Page {
   constructor(private router: Router) {
 
   }
+  //Login and pass parameter
   login(){
-    this.router.navigateByUrl('/account/' + this.username)
+    this.router.navigateByUrl('/tabs/account/' + this.username)
   }
 }
