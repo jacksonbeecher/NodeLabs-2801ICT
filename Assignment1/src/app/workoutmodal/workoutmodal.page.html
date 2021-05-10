@@ -10,6 +10,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Account</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <ion-list>
     <ion-item>
       <ion-label>Title:</ion-label>
@@ -25,11 +30,14 @@
     </ion-item>
     <ion-item>
       <ion-label>Location:</ion-label>
-      <ion-input type="text" [(ngModel)]="Location"  clearInput></ion-input>
+      <ion-input type="text" [(ngModel)]="location"  clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-img src="https://www.joshmorony.com/media/2015/07/Screenshot-2015-07-16-15.32.56.png"></ion-img>
     </ion-item>
     <ion-item>
       <ion-label>Rating:</ion-label>
-      <ion-input type="number" [(ngModel)]="description" min="0" max = "10" clearInput></ion-input>
+      <ion-input type="number" [(ngModel)]="rating" min="0" max = "10" clearInput></ion-input>
     </ion-item>
   </ion-list>
   <ion-button (click)="closeModal()">{{addButton}}</ion-button>

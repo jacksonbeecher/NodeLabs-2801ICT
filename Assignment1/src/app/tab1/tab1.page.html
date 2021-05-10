@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Account
+      Account Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,10 +9,9 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Account</ion-title>
+      <ion-title size="large">Account Login</ion-title>
     </ion-toolbar>
   </ion-header>
-  <h2>Login</h2>
   <ion-list>
     <ion-item>
       <ion-input type="text" autocomplete="username" placeholder="Username" [(ngModel)]="username" name = "username">
@@ -28,7 +27,7 @@
     </ion-item>
     <!-- routerLink="/account" -->
     <div padding>
-      <ion-button routerLink="/account/{{username}}" shape="round" size="large">
+      <ion-button routerLink="/tabs/account/{{username}}" shape="round" size="large">
         <ion-icon slot="end" name="log-in-outline"></ion-icon>
         Login
       </ion-button>
