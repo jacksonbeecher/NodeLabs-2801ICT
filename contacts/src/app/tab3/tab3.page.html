@@ -7,11 +7,18 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-list>
+    <ion-item>
+      <ion-label>Name:</ion-label>
+      <ion-input name='name'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Show Notifications:</ion-label>
+      <ion-toggle name='notif'></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Reminder:</ion-label>
+      <ion-datetime name='date'></ion-datetime>
+    </ion-item>
+  </ion-list>
 </ion-content>
