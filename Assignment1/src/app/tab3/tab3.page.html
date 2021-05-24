@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Friends Activity
+      Tab 3
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,19 +9,9 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Friends Activity</ion-title>
+      <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-list>
-    <ion-item-sliding *ngFor="let friend of friends;index as i">
-      <ion-item-options side="end">
-        <ion-item-option (click)="saveFriend(i)">Save</ion-item-option>
-      </ion-item-options>
-      <ion-item>
-        {{friend.user}}<br>
-        {{friend.date}}<br>{{friend.title}}<br>{{friend.location}}
-      </ion-item>
-    </ion-item-sliding>
-  </ion-list>
 
+  <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>
