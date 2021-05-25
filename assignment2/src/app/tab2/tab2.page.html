@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Workouts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Workouts</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-item-sliding *ngFor="let workout of workouts;index as i">
+      <ion-item-options side="end">
+        <ion-item-option  (click)="editWorkout(i)">Edit</ion-item-option>
+        <ion-item-option color="danger" (click)="deleteWorkout(i)">Delete</ion-item-option>
+      </ion-item-options>
+      <ion-item>
+        <p>{{workout.description}} {{workout.date}}</p>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-fab vertical="center" horizontal="end" slot="fixed">
+    <ion-fab-button size="small" (click)="addWorkout()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
