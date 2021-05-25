@@ -16,7 +16,7 @@ export class Tab4Page implements OnInit {
 
   ngOnInit() {
     console.log('ngOnInit Tab4Page');
-    let latLng = new google.maps.LatLng(27.5530, 153.0512);
+    let latLng = new google.maps.LatLng(-27.5530, 153.0512);
     let mapOptions = {
       center: latLng,
       zoom: 15,
