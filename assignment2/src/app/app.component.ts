@@ -12,25 +12,7 @@ export class AppComponent {
     this.initializeApp();
   }
   key:string = "workouts"
-
-  mWorkouts = [
-    {
-      id: 0,
-      title:"Legs",
-      date:"2020-12-15T13:47",
-      description:"10x Leg Pumps",
-      location:"Gym",
-      rating:1
-    },
-    {
-      id: 1,
-      title:"Arms",
-      date:"2020-12-15T13:47",
-      description:"Bicep Curl",
-      location:"Gym",
-      rating:1
-    }
-  ];
+  //initalize app settings
   async initializeApp() {
     const storage = await this.storage.create();
     //Load workouts list
@@ -45,7 +27,7 @@ export class AppComponent {
     // }); 
     //load userdefault image
     if (await this.storage.get("username") == null){
-      await this.storage.set("username", "New User");
+      await this.storage.set("username", "");
     }
     if (await this.storage.get("email") == null){
       await this.storage.set("email", "");

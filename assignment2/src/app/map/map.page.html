@@ -1,9 +1,16 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>map</ion-title>
+    <ion-title>
+      Gainz Map
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Gainz Map</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div #map id='map'></div>
 </ion-content>

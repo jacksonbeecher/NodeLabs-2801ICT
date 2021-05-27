@@ -30,10 +30,10 @@ export class Tab4Page implements OnInit {
     })
     let infoWindow = new google.maps.InfoWindow({
       content: '<h4>Griffith</h4>'
-      });
-      google.maps.event.addListener(marker, 'click', () => {
+    });
+    google.maps.event.addListener(marker, 'click', () => {
       infoWindow.open(this.map, marker);
-      });
+    });
   }
   
 }
