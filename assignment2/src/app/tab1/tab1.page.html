@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Account
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Account</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <img src={{imageFile}}>
+
+
+
+  <!-- value="{{userimage}}" [(ngModel)]="userimage" -->
+  
+  <ion-list>
+    <ion-item>
+      <input #fileInput type="file" accept="image/*" (change)='imageSelected(fileInput.files)'>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Username:</ion-label>
+      <ion-input type="text" value="{{username}}" [(ngModel)]="username" (change)='changeUsername()'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input type="email" value="{{email}}" [(ngModel)]="email" (change)='changeEmail()'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Notifications:</ion-label>
+      <ion-toggle name="notification" checked="{{notification}}" [(ngModel)]="notification" (ionChange)='changeNotification()'></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

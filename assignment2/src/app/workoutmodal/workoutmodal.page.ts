@@ -29,8 +29,13 @@ export class WorkoutmodalPage implements OnInit {
       this.addButton = 'Add';
     }
   }
+  //close modal and pass parameters
   closeModal(){
     this.modalController.dismiss({title:this.title,date:this.date,description:this.description,location:this.location,rating:this.rating});
+  }
+  //close without saving or adding
+  closeNoSave() {
+    this.modalController.dismiss()
   }
 
 }
