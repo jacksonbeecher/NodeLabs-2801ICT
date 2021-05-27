@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalController, IonItemSliding } from '@ionic/angular';
+import { ModalController} from '@ionic/angular';
 import { WorkoutmodalPage } from '../workoutmodal/workoutmodal.page';
 import { Storage } from '@ionic/storage-angular';
 
