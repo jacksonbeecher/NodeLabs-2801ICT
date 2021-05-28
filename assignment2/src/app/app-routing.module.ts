@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'workoutmodal',
     loadChildren: () => import('./workoutmodal/workoutmodal.module').then( m => m.WorkoutmodalPageModule)
+  },
+  {
+    path: 'welcome',
+    loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
   }
 ];
 @NgModule({
